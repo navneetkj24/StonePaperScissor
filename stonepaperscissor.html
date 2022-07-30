@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 701px;
+  cursor: pointer;
+  
+}
+
+.button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  position: relative;
+}
+#image{
+    margin:4px 590px;
+}
+#r{
+    margin:20px 650px;
+}
+
+#text{
+    text-align: center;
+}
+    </style>
+    </head>
+   
+<body>
+
+<h2 id ="r">Rock Paper Scissors</h2>
+
+<img id = "image" src = "giphy.gif"  style="width:300px"><br>
+<br>
+<button class = "button" type = "button" onclick= "game()" >Play</button>
+<p id = "text"></p>
+<script>
+    function game(){
+let p1 = prompt("Player 1: Enter a number from 1 to 3");
+let p2 = prompt("Player 2: Enter a number from 1 to 3");
+//document.getElementById("rock").src = "https://www.popularmechanics.com/culture/gaming/a31213381/rock-paper-scissors-history/"
+let a = "ROCK";
+let b = "PAPER";
+let c = "SCISSORS";
+
+if((p1==1) && (p2 ==1)){
+    alert("Try again");
+    document.getElementById("text").innerHTML = "Both players have rock";
+    // document.getElementById("image").src = "rock.jpg"
+}
+else if((p1==2) && (p2 ==2)){
+    alert("Try again");
+    document.getElementById("text").innerHTML = "Both players have paper";
+    // document.getElementById("image").src = "paper.jpg"
+}
+else if((p1==3) && (p2 ==3)){
+    alert("Try again");
+    document.getElementById("text").innerHTML = "Both players have scissors";
+    // document.getElementById("image").src = "scissor.jpg"
+}
+else if((p1==1) && (p2 ==2)){
+    document.getElementById("text").innerHTML = "Player 1 has "+ a + ", Player 2 has " + b + ". <b>So, Player 2 wins</b>";
+
+}
+else if((p1==3) && (p2 ==1)){
+    document.getElementById("text").innerHTML ="Player 1 has "+ c + ", Player 2 has " + a + ". <b>So, Player 2 wins</b>";
+}
+else if((p1==3) && (p2 ==2)){
+    document.getElementById("text").innerHTML = "Player 1 has "+ c + ", Player 2 has " + b + ". <b>So, Player 1 wins</b>";
+}
+else if((p1==2) && (p2 ==1)){
+    document.getElementById("text").innerHTML = "Player 1 has "+ b + ", Player 2 has " + a + ". <b>So, Player 1 wins</b>";
+}
+else if((p1==1) && (p2 ==3)){
+    document.getElementById("text").innerHTML = "Player 1 has "+ a + ", Player 2 has " + c + ". <b>So, Player 1 wins</b>";
+}
+else if((p1==2) && (p2 ==3)){
+    document.getElementById("text").innerHTML = "Player 1 has "+ b + ", Player 2 has " + c + ". <b>So, Player 2 wins</b>";
+}
+    }
+
+</script>
+
+</body>
+</html>
